@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-
 # Poetry
 poetry.lock
+
+# Project
+.env
