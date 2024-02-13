@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "welcome-bot-kostushko"
+version = "0.1.0"
+description = "Bot to whelocome new users in chat with predefined message."
+authors = ["Dmitry Ivanov <ydimail@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+Pyrogram = "^2.0.106"
+tgcrypto = "^1.2.5"
+uvloop = "^0.19.0"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
