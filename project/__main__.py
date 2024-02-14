@@ -4,6 +4,9 @@ from os import getenv
 from pyrogram import Client, filters
 from pyrogram.types import BotCommand, ReplyKeyboardMarkup, ReplyKeyboardMarkup
 
+import logging
+
+
 load_dotenv()
 
 api_id = getenv('api_id')
@@ -49,5 +52,20 @@ async def welcome(client, message):
 #         await app.set_bot_commands(bot_commands)
 
 
-app.run()
+logging.basicConfig(
+    filename="warnings.log",
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
+)
+logger = logging.getLogger(__name__)
+
+
+if __name__ == "__main__":
+    try:
+        app.run()
+    except:
+        import traceback
+
+        logger.warning(traceback.format_exc())
+
+
 
